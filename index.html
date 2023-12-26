@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Jogo de Programação Perguntas e respostas </title>
+</head>
+<body>
+    <div id="game-container">
+        <h1>Jogo de Programação</h1>
+        <label for="playerName">Digite seu nome:</label>
+        <input type="text" id="playerName" placeholder="Seu Nome">
+        <button onclick="startGame()">Iniciar Jogo</button>
+
+        <div id="question-container" class="hidden">
+            <h2 id="question"></h2>
+            <button onclick="answerQuestion(true)">Verdadeiro</button>
+            <button onclick="answerQuestion(false)">Falso</button>
+        </div>
+
+        <div id="result-container" class="hidden">
+            <h2 id="result"></h2>
+            <p id="xp-hp">XP: <span id="xp">0</span> | HP: <span id="hp">100</span></p>
+            <button onclick="nextQuestion()">Próxima Pergunta</button>
+        </div>
+
+        <div id="end-container" class="hidden">
+            <h2 id="end-result"></h2>
+            <p id="end-level"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
